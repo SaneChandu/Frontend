@@ -1,0 +1,1 @@
+const Promise1=new Promise((resolve,reject)=>{resolve})

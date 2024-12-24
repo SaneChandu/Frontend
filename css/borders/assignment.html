@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .name{
+        width: 300px;
+        height: 200px;
+        background:linear-gradient(to right,lavender, violet );
+        
+     }
+     .radio{
+        width: 300px;
+        height: 200px;
+        background: radial-gradient(ellipse, lightblue, rgb(106, 38, 175));
+     }
+     .cone{
+        width: 300px;
+        height: 200px;
+        background: conic-gradient(teal,grey);
+     }
+     .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            transition: color 3s ease 2s;
+     }
+     .box:hover{
+        background-color: blue;
+     }
+    </style> 
+</head>
+<body>
+    <!-- Linear Gradients-->
+     <h1>Linear Gradient</h1>
+    <div class="name">linear gradient you must define at least two color stops</div><br><br>
+    <!--Radial gradient-->
+    <h1>Radial Gradient</h1>
+    <div class="radio">radial gradient is defined by its center</div><br><br>
+    <!--conic gradient-->
+    <h1>conic Gradient</h1>
+    <div class="cone">conic gradient is a gradient with color transitions rotated around a center point</div><br><br>
+    
+    <!--Transistion-->
+    <h1>Transition</h1>
+    <div class="box" width="200px" height="200px"></div> 
+</body>
+</html>

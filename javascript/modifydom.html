@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #dae3f1;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #37afc7;
+            border: none;
+            border-radius: 5px;
+            
+        }
+
+        button:hover {
+            background-color: #3ba3c0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li button {
+            background-color: #FF5733;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
+        li button:hover {
+            background-color: #c44222;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamically Add and Delete List Items</h1>
+    <input type="text" id="content" placeholder="Enter the item">
+    <button id="btn">Add item</button> 
+    <ul id="list"></ul>
+    <script>
+        let input=document.getElementById("content");
+        let button=document.getElementById("btn");
+        let list=document.getElementById("list");
+
+        button.addEventListener('click',()=>{
+            if(input.value.trim() !==''){
+                let li=document.createElement("li");
+                li.textContent=input.value;
+                list.appendChild(li);
+                input.value='';
+                let deletebutton=document.createElement("button");
+                deletebutton.textContent="Delete";
+                li.appendChild(deletebutton);
+
+                deletebutton.addEventListener('click',function(){
+                    li.remove();
+                });
+
+                
+
+            }
+        });
+    </script>
+</body>
+</html>
